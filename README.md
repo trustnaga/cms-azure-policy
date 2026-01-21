@@ -13,9 +13,6 @@ azure-policy-terraform
 ├── policies                     # Directory for policy definitions
 │   ├── built-in                 # Built-in Azure Policies
 │   └── custom                   # Custom Azure Policies
-├── examples                     # Example usage of the modules
-│   ├── apply-to-management-group # Example for applying policies to a management group
-│   └── apply-to-subscription     # Example for applying policies to a subscription
 ├── environments                 # Environment configurations for management groups and subscriptions
 |   ├── management-group
 |       ├──main.tf
