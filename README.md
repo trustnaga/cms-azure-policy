@@ -1,6 +1,6 @@
 # Azure Policy Terraform Project
 
-This project provides a set of Terraform modules to deploy Azure Policies at different levels, including Management Groups and Subscriptions. It also includes the capability to create exceptions for policies at various scopes.
+This project provides a set of Terraform modules to deploy Azure Policies at different levels, including Management Groups , Subscriptions  & Resource group. It also includes the capability to create exceptions for policies at various scopes.
 
 ## Project Structure
 
@@ -17,6 +17,14 @@ azure-policy-terraform
 │   ├── apply-to-management-group # Example for applying policies to a management group
 │   └── apply-to-subscription     # Example for applying policies to a subscription
 ├── environments                 # Environment configurations for management groups and subscriptions
+|   ├── management-group
+|       ├──main.tf
+|       ├──variables.tf
+|       ├──terraform.tfvars
+|       ├──providers.tf
+|       └──outputs.tf
+|   ├── subscription
+|   ├── resource-group
 ├── providers.tf                 # Provider configurations
 ├── versions.tf                  # Terraform version requirements
 ├── backend.tf                   # Backend configuration for state storage
@@ -44,7 +52,7 @@ azure-policy-terraform
 1. **Clone the repository:**
    ```
    git clone <repository-url>
-   cd azure-policy-terraform
+   cd cms-azure-policy
    ```
 
 2. **Initialize Terraform:**
@@ -65,10 +73,10 @@ azure-policy-terraform
 ## Examples
 
 - **Apply Policies to Management Group:**
-  Navigate to `examples/apply-to-management-group` and follow the instructions in `main.tf`.
+  Navigate to `environments/management-group` and follow the instructions in `main.tf`.
 
 - **Apply Policies to Subscription:**
-  Navigate to `examples/apply-to-subscription` and follow the instructions in `main.tf`.
+  Navigate to `environments/subscription` and follow the instructions in `main.tf`.
 
 ## Contributing
 
