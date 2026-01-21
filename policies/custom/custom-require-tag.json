@@ -1,0 +1,27 @@
+
+{
+  "properties": {
+    "displayName": "Audit if tag is missing",
+    "policyType": "Custom",
+    "mode": "Indexed",
+    "description": "Audits resources that do not have the required tag.",
+    "parameters": {
+      "tagName": {
+        "type": "String",
+        "defaultValue": "costCenter",
+        "metadata": {
+          "displayName": "Tag name"
+        }
+      }
+    },
+    "policyRule": {
+      "if": {
+        "field": "[concat('tags[', parameters('tagName'), ']')]",
+        "exists": "false"
+      },
+      "then": {
+        "effect": "audit"
+      }
+    }
+  }
+}
